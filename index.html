@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="question-container">
+        <div class="heading">Fetch Books API</div>
+        <div>
+            This application fetches a list of fictional books and displays them in a grid. Use the controls below to filter, sort, and paginate through the books.
+        </div>
+        <button class="fetchButton" id="fetchButton">Fetch Data</button>
+    </div>
+
+    <div class="controls">
+        <select id="sortSelect">
+            <option value="title">Sort by Title</option>
+            <option value="author">Sort by Author</option>
+        </select>
+
+        <input type="text" id="filterInput" placeholder="Filter by title or author">
+
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </div>
+
+    <div class="booklist-container">
+        <div class="booklist" id="booklist">
+            <div class="loading" id="loading">Loading . . .</div>
+        </div>
+    </div>
+    <div class="page-numbers" id="pageNumbers"></div>
+
+    <div id="errorMessage" class="error-message"></div>
+
+</body>
+</html>
